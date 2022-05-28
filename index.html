@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>EdPuzzle Skipper</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+  <h3>EdPuzzle Skipper</h3>
+  <p>Drag the following button into your bookmarks bar, and click the bookmark on an EdPuzzle assignment </p>
+  <a
+    href='javascript: if (window.location.hostname == "edpuzzle.com") {
+    var script = document.body.appendChild(document.createElement("script"));
+    script.src = "https://EdpuzzleSkip.asmallyawn.repl.co/script.js";
+    script.remove();
+} else {
+    alert("Please run this on https://edpuzzle.com/assignments/[assignment_id]/watch")
+}'>
+    <button>
+      Skipper
+    </button>
+  </a>
 </body>
 
 </html>

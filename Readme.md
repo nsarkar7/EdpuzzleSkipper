@@ -10,7 +10,7 @@ Copy the following code and make it a bookmarklet
 
 To make a bookmarklet, simply create a new bookmark, name it whatever you want, and then paste the code below into the url box.
 
-![bookmarklet creation](image.png)
+![bookmarklet creation](Images/image.png)
 
 ```javascript
 javascript: if (window.location.hostname == "edpuzzle.com") {
@@ -75,6 +75,7 @@ skipRequest.send();
 
 ```
 
+You can also use [this website](https://EdpuzzleSkip.asmallyawn.repl.co).
 ## Usage
 
 Simply go to any EdPuzzle, a link like this (https://edpuzzle.com/assignments/[assignment_id]/watch), and click the bookmarklet.
