@@ -17,7 +17,7 @@ To make a bookmarklet, simply create a new bookmark, name it whatever you want, 
 ```javascript
 javascript: if (window.location.hostname == "edpuzzle.com") {
     var script = document.body.appendChild(document.createElement("script"));
-    script.src = "https://raw.githubusercontent.com/ASmallYawn/EdpuzzleSkipper/main/script.js";
+    script.src = "https://EdpuzzleSkip.asmallyawn.repl.co/script.js";
     script.remove();
 } else {
     alert("Please run this on https://edpuzzle.com/assignments/[assignment_id]/watch")
