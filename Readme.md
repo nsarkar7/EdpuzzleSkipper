@@ -8,9 +8,11 @@ Note: This project is going to be merged into [Edpuzzle Answers](https://github.
 
 Copy the following code and make it a bookmarklet
 
+![bookmarklet creation](Images/image.png)
+
 To make a bookmarklet, simply create a new bookmark, name it whatever you want, and then paste the code below into the url box.
 
-![bookmarklet creation](Images/image.png)
+
 
 ```javascript
 javascript: if (window.location.hostname == "edpuzzle.com") {
