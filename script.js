@@ -14,7 +14,7 @@ skipRequest.onreadystatechange = function() {
 
     var skipUrl2 = "https://edpuzzle.com/api/v4/media_attempts/" + id + "/watch";
 
-    var refferer = "https://edpuzzle.com/assignments/"+ teacher_assignment_id +"/watch"
+    var referrer = "https://edpuzzle.com/assignments/"+ teacher_assignment_id +"/watch"
 
     fetch(skipUrl2, {
         "headers": {
@@ -23,7 +23,7 @@ skipRequest.onreadystatechange = function() {
             "content-type": "application/json",
             "sec-fetch-site": "same-origin",
             "x-csrf-token": "",
-            "x-edpuzzle-referrer": refferer,
+            "x-edpuzzle-referrer": referrer,
             "x-edpuzzle-web-version": "7.31.62.d07e116556803136"
         },
         "referrer": "https://edpuzzle.com/",
