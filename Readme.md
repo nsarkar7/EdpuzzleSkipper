@@ -2,7 +2,7 @@
 
 Follow the steps below to use the EdPuzzle Video Skipper
 
-Note: This project is going to be merged into [Edpuzzle Answers](https://github.com/ading2210/edpuzzle-answers), but I will continue to update this repo too.
+Note: This project is going to be merged into [Edpuzzle Answers](https://github.com/ading2210/edpuzzle-answers), but this repo will continue to be maintained.
 
 ## Add the bookmarklet
 
@@ -88,4 +88,4 @@ Simply go to any EdPuzzle, a link like this (https://edpuzzle.com/assignments/[a
 
 Please star if you enjoy it :)
 
-ඞ
+ඞ sussy balls
