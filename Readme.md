@@ -1,5 +1,7 @@
 # Edpuzzle Video Skipper 
 
+![jsdelivr badge](https://data.jsdelivr.com/v1/package/gh/ASmallYawn/EdpuzzleSkipper/badge)
+
 Follow the steps below to use the EdPuzzle Video Skipper
 
 Note: This project is being used in [Edpuzzle Answers](https://github.com/ading2210/edpuzzle-answers). 
