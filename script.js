@@ -24,7 +24,7 @@ function getCSRF() {
 }
 
 function getAssignment(csrf) {
-  var assignment_id = opener.location.href.split("/")[4];
+  var assignment_id = window.location.href.split("/")[4];
   var url1 = "https://edpuzzle.com/api/v3/assignments/" + assignment_id + "/attempt";
   httpGet(url1, function(){
     var data = JSON.parse(this.responseText);
@@ -45,11 +45,11 @@ function postAttempt(csrf, data) {
     ['content-type', 'application/json'],
     ['x-csrf-token', csrf],
     ['x-edpuzzle-referrer', referrer],
-    ['x-edpuzzle-web-version', opener.__EDPUZZLE_DATA__.version]
+    ['x-edpuzzle-web-version', window.__EDPUZZLE_DATA__.version]
   ];
   
   httpGet(url2, function(){
-    opener.location.reload();
+    window.location.reload();
   }, headers, "POST", JSON.stringify(content));
 }
 
