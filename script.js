@@ -4,14 +4,13 @@ function httpGet(url, callback, headers=[], method="GET", content=null) {
   request.open(method, url, true);
   if (headers.length > 0) {
     for (const header of headers) {
-      request.setRequestHeader(header[0], header[1])
+      request.setRequestHeader(header[0], header[1]);
     }
   }
   request.send(content);
 }
 
 function init() {
-  alert("Getting CSRF Token");
   getCSRF();
 }
 
@@ -20,19 +19,17 @@ function getCSRF() {
   httpGet(csrfURL, function(){
     var data = JSON.parse(this.responseText);
     var csrf = data.CSRFToken;
-    alert("Getting assignment data...")
     getAssignment(csrf);
-  })
+  });
 }
 
 function getAssignment(csrf) {
-  var assignment_id = window.location.href.split("/")[4];
+  var assignment_id = opener.location.href.split("/")[4];
   var url1 = "https://edpuzzle.com/api/v3/assignments/" + assignment_id + "/attempt";
   httpGet(url1, function(){
     var data = JSON.parse(this.responseText);
-    alert("Posting watchtime data...")
     postAttempt(csrf, data);
-  })
+  });
 }
 
 function postAttempt(csrf, data) {
@@ -48,12 +45,11 @@ function postAttempt(csrf, data) {
     ['content-type', 'application/json'],
     ['x-csrf-token', csrf],
     ['x-edpuzzle-referrer', referrer],
-    ['x-edpuzzle-web-version', window.__EDPUZZLE_DATA__.version]
+    ['x-edpuzzle-web-version', opener.__EDPUZZLE_DATA__.version]
   ];
   
   httpGet(url2, function(){
-    alert("Video skipped successfully, reloading.");
-    window.location.reload();
+    opener.location.reload();
   }, headers, "POST", JSON.stringify(content));
 }
 
